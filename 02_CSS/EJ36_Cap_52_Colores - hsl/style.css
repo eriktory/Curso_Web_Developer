@@ -1,0 +1,56 @@
+/* 
+    HSL / HSLA
+
+        El modo de color HSL e el más intuitivo para los humanos. Su nombre viene de las siglas Hue (tono) Saturation (saturacion) y Lightness (Luminancia)
+
+        EL primer valor es el ángulo en el circulo cromático donde 0 y 360 será el color rojo. Hay ciertos valores que nos pueden servir como referencia para relacionar mejor los colores con sus angulos.
+        0 -> rojo
+        60 -> amarillo
+        120 -> verde
+        180 -> cian
+        240 -> azul
+        300 -> magenta
+
+        El segundo valor es la saturacion o intensidad del color.
+        0% -> gris
+        100% -> color puro
+
+        El tercer valor es la luminosidad del color
+        0% -> negro nada de luz
+        100% -> blanco luz máxima
+
+        Nota: Es importante que aunque el valor de saturación o luminancia sea 0 hay que poner 0% sino, no funcionará.
+
+        El modo HSL también admite transparencia y su sintaxis es la misma que la del modo RGB. Tendremos dos sintaxis disponibles.
+        hsla (h,s,l,a)
+        hsl (h s l / a)
+        En ambos casos el valor alpha va de 0 a 1.
+
+        Existen otros cuatro modos de color en los que está trabanjando que serían CMYK (Cian, Magenta, Yellow, Black),
+        HWB (Hue, Whiteness, Blackness), Lab (Lightness, distance a, distance b) y Lch (lightness, chroma, hue), todos están en el borrador del modulo de color de nivel cuatro pero aún no es estándar.
+        
+        */
+
+body {
+    background-color: mediumorchid;
+    /* background-color: hsl(0, 100%, 40%);
+    background-color: hsl(60, 100%, 40%);
+    background-color: hsl(60, 100%, 40%,.5);
+    background-color: hsla(60, 100%, 40%, .5);
+    background-color: hsl(60 100% 40% / .5); */
+}
+
+.main {
+    /* color: aquamarine; */
+    /* background-color: currentColor; */
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: lightcoral;
+    box-shadow: 5px 5px 10px #0008;
+    box-shadow: 5px 5px 10px hsl(180 50% 50%);
+    /* box-shadow: 5px 5px 10px hsl(180 50% 0% / .8);
+    box-shadow: 5px 5px 10px hsl(180 50% 0% / .2); */
+}

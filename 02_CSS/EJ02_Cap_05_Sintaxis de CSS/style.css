@@ -1,0 +1,14 @@
+/* 
+* Selector: el elemento al que vamos a aplicar etilos
+* Propiedad: lo que vamos a cambiar
+*Valor: El nuevo valor que vaa tener
+* Propiedad:Valor -> Se le denomina declaracion
+* Regla: conjunto de selector+declaracion(es)
+*/
+
+/* selector {
+    propiedad: valor;
+    propiedad2: valor valor;
+    propiedadN: ValorN;
+} */
+

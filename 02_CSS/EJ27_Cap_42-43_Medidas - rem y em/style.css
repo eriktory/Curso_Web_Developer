@@ -1,0 +1,51 @@
+/* 
+    Las medidas en CSS se pueden agrupar en dos grupos, absolutas y relativas.
+
+    las medidas abolutas NO CAMBIAN y siempre mantendrán su tamaño independientemente del dispositivo o la interacción del usuario.
+    La más usada es px (pixeles) cuya medida es 1/96 de 1in, pero existen otras medidas como:
+        cm (centimetros) -> 1cm = 96px/2,54
+        mm (milimetros) -> 1mm = 1/10 1cm
+        Q (cuarto de milimetro) 1Q = 1/40 de 1cm
+        in (inches, pulgadas) -> 1in = 2,54cm * 96px
+        pc (pica) -> 1pc * 1/16 de 1in
+        pt (puntos) -> 1pt = 1/72 de 1in
+
+    Las medidas relativas SIEMPRE dependen de un contexto, son las que se recomiendan utilizar en la mayoría de ocasiones porque nos van a permitir que todos los elementos escalen proporcionalmente.
+    las más usadas son: em, rem, %, vw, vh, vwmin, vmax aunque tenemos otras como:
+        ex -> altura de x de la fuente del elemento.
+        ch -> la medida del anncho del glifo "0" de la letra del elemento.
+        lh -> altura de la linea del elemento
+    
+    rem -> corresponde a la medida de la "m" de la raiz del documento (html)
+
+    ejemplo: 16px = 1rem -> 2rem = 32px
+
+    em -> corresponde a la medida de la "m" del contexto donde nos encontremos.
+
+    El estandar del tamaño de fuente por defecto en la raiz del documento es de 16px, y NO ES RECOMENDABLE MODIFICARLO.
+
+    NOTA: tanto "em" como "rem" se calcula en base a la propiedad font-size (tamaño de la fuente)
+
+*/
+
+
+body {
+    background-color: #333;
+    color: lightcoral;
+}
+
+/* .title {
+    font-size: 2rem;
+} */
+
+.link {
+    background-color: lightcoral;
+    color: #333;
+    padding: 16px 32px;
+    padding: 1rem 2rem;
+    padding: 1em 2em;
+    border-radius: 8px;
+    border-radius: 0.5rem;
+    border-radius: 0.5em;
+    font-size: 2rem;
+}

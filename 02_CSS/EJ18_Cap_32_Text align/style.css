@@ -1,0 +1,64 @@
+/* 
+
+    text-aling es la propiedad quenos permite alinear horizontalmente el contenido de un elemento de bloque siempre que el contenido NO TENGA ANCHO DECLARADO
+
+    Acepta cuatro posibles valores
+        text-align: left; -> Alienea el contenido a la izquierda
+        text-align: right; -> Alinea el contenido a la derecha
+        text-aling: center; -> Alinea el contenido al centro
+        text-aling: justify; -> Alinea el contenido de forma justificada. No es recomendable usarlo.
+
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    color: #fff;
+}
+
+.text {
+    text-align: left;
+    text-align: right;
+    text-align: center;
+    text-align: justify;
+}
+
+.box {
+    background-color: #666;
+    width: 100px;
+    padding: 10px 0;
+    margin: 20px 0;
+    border: 2px solid lightcoral;
+    text-align: right;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.link {
+    color: #fff;
+    display: inline-block;
+    display: block;
+    background-color: #666;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img {
+    width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    /* text-align: center; */
+}
+
+.img-container {
+    text-align: center;
+}

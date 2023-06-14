@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagenes</title>
+    <style>
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<!-- 
+
+    DPR (Device Pixel Ratio)
+        Es la relacion que existe entre los píxeles reales que tiene el dispositivo y los pixeles que tenemos disponibles para "pintar" contenido
+
+    DPR = píxeles reales / píxeles disponibles
+
+    [srcset] -> atributo junto con la URL + DRP para cargar la imagen segun el "X" del dispositivo
+
+ -->
+
+<body>
+    <h1>Device Pixel Ratio - srcset - picture</h1>
+    <img 
+    srcset="
+        /EJ36_Cap_58-60_Imagenes_parte_2/assets/img/mapamundi.jpg,
+        /EJ36_Cap_58-60_Imagenes_parte_2/assets/img/mapamundi.webp 2x,
+        /EJ36_Cap_58-60_Imagenes_parte_2/assets/img/mapamundi.webp 3x"
+    src="/EJ36_Cap_58-60_Imagenes_parte_2/assets/img/mapamundi.jpg"
+    alt="mapamundi">
+
+    <picture>
+        <source srcset="
+        /EJ36_Cap_58-60_Imagenes_parte_2/assets/img/mapamundi.jpg,
+        /EJ36_Cap_58-60_Imagenes_parte_2/assets/img/mapamundi.webp 2x,
+        /EJ36_Cap_58-60_Imagenes_parte_2/assets/img/mapamundi.webp 3x">
+    <img src="/EJ36_Cap_58-60_Imagenes_parte_2/assets/img/mapamundi.jpg" alt="mapamundi"> 
+    </picture>
+    
+    <picture>
+        <source srcset="/EJ36_Cap_58-60_Imagenes_parte_2/assets/img/mapamundi.webp, /EJ36_Cap_58-60_Imagenes_parte_2/assets/img/mapamundi.jpg" 
+        media="(max-width:1200px)">
+        <img src="/EJ36_Cap_58-60_Imagenes_parte_2/assets/img/mapamundi.jpg" alt="mapamundi"> 
+    </picture>
+</body>
+</html>

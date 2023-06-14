@@ -1,0 +1,68 @@
+/* 
+Border-radius: Es la propiedad que nos permite redondear vertices de forma independiente.
+Es un shorthand que engloba cuatro propiedades:
+    border-top-left-radius -> Radio del borde superior izquierdo
+    border-top-right -> Radio del borde superior derecho
+    border-bottom-right-radius -> Radio del borde inferior derecho
+    border-bottom-left-radius -> Radio del borde inferior izquierdo
+
+    Si solo recibe un valor dibujará un circulo en cada vertice del radio que especifiquemos
+
+    border-radius: 50px; -> Circulo con 50px de radio
+
+    Si utilizamos el border-radius como shorthand hay diferencias entre si queremos dar un valor a cada lado (circulo) o dos (elipse)
+
+    Con un solo valor:
+        border-radius: 50px; -> Circulo de 50px a cada vertice
+        border-radius: 50px 100px; -> Circulo de 50px en el vertice superior izauierdo y en el inferior derecho y de 100px en el superior derecho y el inferior izquierdo.
+        border-radius: 50px 100px 200px; -> Circulo de 50px en el vertice superior izauierdo de 100px en el superior derecho y el inferior izquierdo y de 200px en el inferior derecho.
+        border-radius: 50px 100px 200px 300px; -> Circulo de 50px en el vertice superior izauierdo, de 100px en el superior derecho, de 200px en el inferior derecho y 300px en el inferior izquierdo.
+    
+    Si le damos dos valores separados por una barra dibujará una elipse en cada vertice con los radios que le especifiquemos.
+    boreder-radius: 50px / 100px; -> Elipse con 50px en el radio X y 100px en el radio Y
+
+    Con dos valores:
+        AL tener dos radios debemos 
+        agrupar los radios y separarlos por una barra.
+        
+        border-radius: 25px / 50px; -> Elipse de 25px en Y y 50px en X a cada vertice.
+
+        border-radius: 25px 50px / 50px 100px; -> Elipse de 25px en Y y 50x en X a los vertices superior izquierdo e inferior derecho y una elipse de 50px en Y y 100px en X en los vertices superior derecho e inferior izauierdo.
+
+        border-radius: 25px 50px 75px / 50px 100px 150px; -> Elipse de 25px en Y y 50 px en X al vertice superior izquierdo, una elipse de 50px en Y y 100px en X en los vertices superior derecho e inferior izquierdo y una elipse de 75px en Y y de 150px en X al vertice inferior derecho.
+
+        border-radius: 25px 50px 75px 100px / 50px 100px 150px 200px; -> Elipse de 25px en Y y 50px en X al vertice superior izquierdo, una elipse de 50px en Y y de 100px en X en el vertice superior derecho, una elipse de 75px en Y y de 150px en X al vertice inferior derecho y una elipse de 100px en Y y 200px en Y en el vertice inferior izquierdo.
+
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+}
+
+.box {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    background-color: lightcyan;
+    width: 300px;
+    height: 300px;
+    /* border-top-left-radius: 50px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 150px;
+    border-bottom-left-radius: 200px;
+    border-radius: 50px;
+    border-radius: 50px 100px;
+    border-radius: 50px 100px 150px;
+    border-radius: 50px 100px 150px 200px; */
+    border-radius: 50px / 100px;
+    border-radius: 50px 100px / 100px 150px;
+    border-radius: 50px 100px 150px/ 100px 150px 200px;
+    border-radius: 50px 100px 150px 200px / 100px 150px 200px 250px;
+}
+

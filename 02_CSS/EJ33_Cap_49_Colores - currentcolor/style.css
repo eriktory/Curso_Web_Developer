@@ -1,0 +1,39 @@
+/* 
+    Colores
+        La mayoria de las pantallas funcionan con un modo de color aditivo. La suma de RGB da como reslutado un blanco.
+        Tenemos varias formas de dar color en CSS
+
+        keywords -> palabras clave que representan colores https: //www.w3.org/wiki/CSS/Properties/color/keywords
+        IMPORTANTE: recordar que existe el color "transparent"
+
+    CurrentColor: es una palabra clave que se puede usar en lugar de cualquier valor de color y usará el valor que sea espablecido o heredado en la propiedad color.
+*/
+
+body {
+    background-color: mediumorchid;
+    /* color: #333; */
+}
+
+.main {
+    /* color: aquamarine; */
+    /* background-color: currentColor; */
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: lightcoral;
+    border: 5px solid currentColor;
+    border: 5px solid;
+    /* border-left: 100px solid red;
+    border-top: 100px solid blue;
+    border-bottom: 100px solid green; */
+    /* border-top: 500px solid red;
+    border-left: 250px solid transparent;
+    border-right: 250px solid transparent; */
+    /* width: 300px;
+    height: 300px;
+    background-color: purple;
+    background-color: lightsalmon;
+    color: lime; */
+}

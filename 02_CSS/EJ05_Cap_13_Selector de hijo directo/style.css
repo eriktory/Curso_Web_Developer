@@ -1,0 +1,32 @@
+/* SELECTORES */
+
+/* 
+    Selectores Simples
+        Selectores Elementales
+            Selector Universal -> *
+            Selector de Tipo o de Etiqueta - Nombre de la Etiqueta
+        Selectores de Atributos
+            id -> id del elemento}
+            clase -> clase del elemento
+            otros atributos
+                [atributos]
+                [atributo=valor]
+                [atributo^=valor]
+                [atributo*=valor]
+                [atributo$=valor]
+                [atributo|=valor]
+
+    Selectores Compuestos
+        Selectores Agrupados -> Se agrupan los selectores separados por comas y se escribe el estilo una sola vez
+        Selectores Combinadores
+            Selector descendiente
+            Selector de hermano siguiente se usa el simbolo +
+            Selector de hermanos siguientes se usa el simbolo ~
+            Selector de hijo directo -> Selecciona SOLO los hijos directos se usa el simbolo >
+
+        Pseudoclases - Pseudoelementos
+*/
+
+.container > p {
+    background-color: tomato;
+}

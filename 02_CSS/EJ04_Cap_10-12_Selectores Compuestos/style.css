@@ -1,0 +1,74 @@
+/* SELECTORES */
+
+/* 
+    Selectores Simples
+        Selectores Elementales
+            Selector Universal -> *
+            Selector de Tipo o de Etiqueta - Nombre de la Etiqueta
+        Selectores de Atributos
+            id -> id del elemento}
+            clase -> clase del elemento
+            otros atributos
+                [atributos]
+                [atributo=valor]
+                [atributo^=valor]
+                [atributo*=valor]
+                [atributo$=valor]
+                [atributo|=valor]
+
+    Selectores Compuestos
+        Selectores Agrupados -> Se agrupan los selectores separados por comas y se escribe el estilo una sola vez
+        Selectores Combinadores
+            Selector descendiente
+            Selector de hermano siguiente +
+            Selector de hermanos siguientes ~
+
+        Pseudoclases - Pseudoelementos
+*/
+
+/* .text {
+    background-color: steelblue;
+}
+
+.text-2 {
+    background-color: steelblue;
+}
+
+.text-3 {
+    background-color: steelblue;
+}
+
+.text-4 {
+    background-color: steelblue;
+} */
+
+/* .text,
+.text-2,
+.text-3,
+.text-4 {
+    background-color: steelblue;
+} */
+
+/* div .title-2 {
+    background-color: teal;
+} */
+
+/* .text-2 + h2 {
+    background-color: tomato;
+}
+
+.text-2 + .title-2 {
+    background-color: tomato;
+} */
+
+/* .text-2 ~ p {
+    background-color: teal;
+} */
+
+/* .text-2 ~ .text {
+    background-color: teal;
+} */
+
+/* .text-2~.text span {
+    background-color: teal;
+} */
