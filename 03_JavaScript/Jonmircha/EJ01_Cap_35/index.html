@@ -41,17 +41,76 @@ Programa una funcion que te devuelva el texto recortado segun el numero de carac
 Ejemplo: mifuncion("Hola Mundo", 4) devolverá "Hola" 
 */
 
-const recortarTexto = (cadena = "", longitud = undefined) =>
+/* const recortarTexto = (cadena = "", longitud = undefined) =>
  (!cadena)
   ? console.warn("No ingresaste ningun texto")
   :console.info(cadena.slice(0,longitud));
 
 recortarTexto("Hola Mundo",4);
 recortarTexto();
-recortarTexto("Hola Hola");
+recortarTexto("Hola Hola"); */
 
-/*Programa una funcion que dada un String te devuelva un Array
+/* const recortarTexto = (cadena = "", longitud = undefined) =>
+ (!cadena)
+  ? console.warn("No ingresaste ningun texto")
+  :(longitud === undefined)
+    ?console.warn("No ingresaste la longitud para recortar el texto")
+    :console.info(cadena.slice(0,longitud));
+
+recortarTexto("Hola Mundo",4);
+recortarTexto();
+recortarTexto("Hola Hola");
+recortarTexto("",5); */
+
+/*
+Ejercicio 03
+Programa una funcion que dada un String te devuelva un Array de textos separados por cierto carater.
+Ejemplo: miFuncion('Hola que tal',' ') devolverá ['Hola', 'que', 'tal']
+*/
+
+/* const strigArray = (cadena = "", separador = undefined) =>
+(!cadena)
+?console.warn("No ingresaste ninguna cadena de texto")
+ :(separador === undefined)
+  ?console.warn("No ingresaste ningun separador")
+  :console.info(cadena.split(separador));
+
+strigArray("Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem possimus cumque et dolorem ipsam eligendi voluptatibus, eos fuga reiciendis nisi. Pariatur repudiandae fuga placeat architecto, mollitia ex labore dolore! Soluta."," ");
+
+strigArray("Ene,Feb,Mar,Abr,May,Jun,Jul,Ago,Sep,Oct,Nov,Dic",",");
+
+strigArray();
+strigArray("Hola Mundo");
+strigArray("","-") */
+
+/* 
+Ejercicio 04
+Programa una funcion que repeta un texto X veces
+Ejemplo: miFuncion('Hola Mundo',3) devolvera Hola Mundo Hola Mundo Hola Mundo
+*/
+/* 
+const repeatString = (texto ="", veces = undefined )=>{
+    if(!texto) return console.warn("No ingresaste ningun texto");
+
+    if(veces === undefined) return console.warn("No ingresaste ningun numero");
+    
+    if(veces === 0) return console.error("El numero no puedo ser cero");
+
+    if(Math.sign(veces) === -1) return console.error("El numero no puedo ser negativo");
+
+    for(let i = 1; i<=veces; i++) console.info(`${texto}, ${i}`)
+}
+
+repeatString("Hola Mundo",3);
+repeatString("Hola Mundo",0);
+repeatString("Hola Mundo",-2);
+repeatString("Hola Mundo");
+repeatString("",3);
+*/
+
 
 </script>
+
+
 </body>
 </html>
