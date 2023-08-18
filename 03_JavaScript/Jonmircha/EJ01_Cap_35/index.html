@@ -26,15 +26,32 @@ ejemplo. mifucion ("Hola Mundo") devolvera 10
         contarCadena();
         contarCadena("Hola Mundo");
 */
-
+/*
 const contarCadena = (cadena="") => (!cadena)
 ?console.warn("No ingresaste ninguna cadena")
 :console.info(`La cadena "${cadena}" tiene ${cadena.length} caracteres`);
 
 contarCadena();
 contarCadena("Hola Mundo");
+*/
 
+/*
+Ejercicio 02
+Programa una funcion que te devuelva el texto recortado segun el numero de caracteres indicados
+Ejemplo: mifuncion("Hola Mundo", 4) devolverá "Hola" 
+*/
 
-    </script>
+const recortarTexto = (cadena = "", longitud = undefined) =>
+ (!cadena)
+  ? console.warn("No ingresaste ningun texto")
+  :console.info(cadena.slice(0,longitud));
+
+recortarTexto("Hola Mundo",4);
+recortarTexto();
+recortarTexto("Hola Hola");
+
+/*Programa una funcion que dada un String te devuelva un Array
+
+</script>
 </body>
 </html>
