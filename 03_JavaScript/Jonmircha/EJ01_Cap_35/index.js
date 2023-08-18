@@ -4,7 +4,7 @@ function contarCadena(cadena=""){
     if(!cadena){
         console.warn("No ingresaste ninguna cadena")
     } else{
-        console.info(La cadena "${cadena}" tiene ${cadena.length} caracteres' )
+        console.info(`La cadena "${cadena}" tiene ${cadena.length} caracteres`)
     }
 }
 
