@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hola Mundo</h1>
+    <script>
+
+/*
+Ejercicio 01
+Programa una funcion que cuente el numero de caracteres de una cadena de texto.
+ejemplo. mifucion ("Hola Mundo") devolvera 10
+*/
+
+/*        function contarCadena(cadena=""){
+            if(!cadena){
+                console.warn("No ingresaste ninguna cadena")
+            } else{
+                console.info(`La cadena "${cadena}" tiene ${cadena.length} caracteres`)
+            }
+        }
+
+        contarCadena();
+        contarCadena("Hola Mundo");
+*/
+/*
+const contarCadena = (cadena="") => (!cadena)
+?console.warn("No ingresaste ninguna cadena")
+:console.info(`La cadena "${cadena}" tiene ${cadena.length} caracteres`);
+
+contarCadena();
+contarCadena("Hola Mundo");
+*/
+
+/*
+Ejercicio 02
+Programa una funcion que te devuelva el texto recortado segun el numero de caracteres indicados
+Ejemplo: mifuncion("Hola Mundo", 4) devolverá "Hola" 
+*/
+
+/* const recortarTexto = (cadena = "", longitud = undefined) =>
+ (!cadena)
+  ? console.warn("No ingresaste ningun texto")
+  :console.info(cadena.slice(0,longitud));
+
+recortarTexto("Hola Mundo",4);
+recortarTexto();
+recortarTexto("Hola Hola"); */
+
+/* const recortarTexto = (cadena = "", longitud = undefined) =>
+ (!cadena)
+  ? console.warn("No ingresaste ningun texto")
+  :(longitud === undefined)
+    ?console.warn("No ingresaste la longitud para recortar el texto")
+    :console.info(cadena.slice(0,longitud));
+
+recortarTexto("Hola Mundo",4);
+recortarTexto();
+recortarTexto("Hola Hola");
+recortarTexto("",5); */
+
+/*
+Ejercicio 03
+Programa una funcion que dada un String te devuelva un Array de textos separados por cierto carater.
+Ejemplo: miFuncion('Hola que tal',' ') devolverá ['Hola', 'que', 'tal']
+*/
+
+/* const strigArray = (cadena = "", separador = undefined) =>
+(!cadena)
+?console.warn("No ingresaste ninguna cadena de texto")
+ :(separador === undefined)
+  ?console.warn("No ingresaste ningun separador")
+  :console.info(cadena.split(separador));
+
+strigArray("Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem possimus cumque et dolorem ipsam eligendi voluptatibus, eos fuga reiciendis nisi. Pariatur repudiandae fuga placeat architecto, mollitia ex labore dolore! Soluta."," ");
+
+strigArray("Ene,Feb,Mar,Abr,May,Jun,Jul,Ago,Sep,Oct,Nov,Dic",",");
+
+strigArray();
+strigArray("Hola Mundo");
+strigArray("","-") */
+
+/* 
+Ejercicio 04
+Programa una funcion que repeta un texto X veces
+Ejemplo: miFuncion('Hola Mundo',3) devolvera Hola Mundo Hola Mundo Hola Mundo
+*/
+
+/* 
+const repeatString = (texto ="", veces = undefined )=>{
+    if(!texto) return console.warn("No ingresaste ningun texto");
+
+    if(veces === undefined) return console.warn("No ingresaste ningun numero");
+    
+    if(veces === 0) return console.error("El numero no puedo ser cero");
+
+    if(Math.sign(veces) === -1) return console.error("El numero no puedo ser negativo");
+
+    for(let i = 1; i<=veces; i++) console.info(`${texto}, ${i}`)
+}
+
+repeatString("Hola Mundo",3);
+repeatString("Hola Mundo",0);
+repeatString("Hola Mundo",-2);
+repeatString("Hola Mundo");
+repeatString("",3);
+*/
+
+
+/* 
+Ejercicio 05
+Programa una funcion que invierta las palabras de una cadena de texto
+Ejemplo: miFuncion('Hola Mundo') devolverá "odnuM aloH"
+*/
+/* 
+const inverString = (cadena = "")=>
+(!cadena)
+ ?console.warn("No ingresaste una cadena de texto")
+ :console.info(cadena.split("").reverse().join(""));
+
+ inverString();
+ inverString("Hola Mundo")
+  */
+
+
+/*
+Ejercicio 06
+Programa una funcion que que se repite una palabra en un texto largo
+Ejemplo: miFuncion('hola mundo adios mundo') devolverá 2
+*/
+/* 
+const textoEnCadena = (cadena="", texto="")=>{
+    if (!cadena) return console.warn("No ingresaste texto largo");
+
+    if (!texto) return console.warn("No ingresaste la palabra a evaluar");
+
+    let i=0, contador=0;
+
+    while(i!==-1){
+        i=cadena.indexOf(texto, i);
+        if(i!==-1){
+            i++;
+            contador++;
+        }
+    }
+    return console.info(`la palabra ${texto} se repite ${contador} veces`)
+}
+
+textoEnCadena();
+textoEnCadena("","mundo");
+textoEnCadena("Hola mundo adios mundo","");
+textoEnCadena("Hola mundo adios mundo","mundo");
+ */
+
+
+/*
+Ejercicio 07
+Programa una funcion que valide si una palabra o frase dada es un palindromo (que se lee igual en un sentido que en otro)
+Ejemplo: miFuncion('Salas') devolverá true
+*/
+
+/* const palindromo = (palabra="") => {
+    if (!palabra) return console.warn("No ingresaste ninguna palabra o frase");
+
+    palabra = palabra.toLocaleLowerCase();
+
+    let alReves = palabra.split("").reverse().join("");
+
+    return (palabra === alReves)
+     ?console.info(`Si es palindromo, Palabra original ${palabra}, Palabra al reves ${alReves}`)
+     :console.info(`No es palindromo, Palabra original ${palabra}, Palabra al reves ${alReves}`)
+} 
+
+palindromo("");
+palindromo("Hola");
+palindromo("Salas");
+ */
+
+/*
+Ejercicio 08
+Programa una funcion que elimine cierto patron de caracteres de un texto dado
+Ejemplo: miFuncion("xyz1,xyz2,xyz3,xyz4,xyz5","xyz") devolverá "1,2,3,4,5"
+*/
+/* 
+const eliminarCar = (texto = "", patron = "") =>
+(!texto)
+ ?console.warn("No ingresaste ningun texto")
+ :(!patron)
+  ?console.warn("No ingresaste ningun patron de caracteres")
+  :console.info(texto.replace(new RegExp(patron, "ig"),""));
+
+eliminarCar();
+eliminarCar("xyz1,xyz2,xyz3,xyz4,xyz5");
+eliminarCar("xyz1,xyz2,xyz3,xyz4,xyz5","xyz");
+ */
+
+/* 
+Ejercicio 09
+Programa una funcion que obtenga un numero aleatorio entre 501 y 600
+*/
+
+/* const aleatorio =() => console.info(Math.round(Math.random()*100)+500);
+
+aleatorio();
+ */
+
+
+/* 
+Ejercicio 10
+Programa una funcion que reciba un numero y  evalue si es capicúa o no (que     sentido que en otro)
+Ejemplo:  miFuncion(2002) devolvera true
+*/
+/* 
+const capicua =(numero = 0) => {
+ 
+ if(!numero) return console.warn("No ingresaste un numero");
+ 
+ if(typeof numero !== "number") return console.error(`El valor ${numero} ingresado, NO es un numero`);
+
+ numero = numero.toString();
+ let alReves = numero.split("").reverse().join("");
+
+ return (numero === alReves)
+ ?console.info(`Si es es capicúa Numero Original ${numero}, Numero al reves es ${alReves}`)
+ :console.info(`NO es es capicúa Numero Original ${numero}, Numero al reves es ${alReves}`)
+
+}
+
+capicua();
+capicua("19");
+capicua([]);
+capicua({})
+capicua(1.91);
+capicua(18.81)
+capicua(2000);
+capicua(2002);
+
+ */
+
+/* 
+Ejercicio 11
+Programa una funcion que calcule el factorial de un numero (El factorial de un entero positivo n, se define como el producto de todos los numeros enteros positivos desde 1 hasta n)
+Ejemplo:  miFuncion(5) devolvera 120
+*/
+/* 
+const factorial = (numero = undefined)=>{
+if(numero === undefined) return console.warn("No ingresaste un numero")
+
+if(typeof numero !== "number") return console.error(`El valor ${numero} ingresado, NO es un numero`);
+
+if(numero === 0) return console.error("El numero no puede ser cero");
+
+if(Math.sign(numero) === -1) return console.error("El numero no puede ser un numero negativo")
+
+let factorial = 1;
+
+for(i=numero; i>1; i--){
+    // factorial =  factorial*i
+    // Se simplifica asi:
+    factorial*=i;
+}
+
+
+return console.info(`El factorial de ${numero} es ${factorial}`);
+
+}
+
+
+factorial();
+factorial("5");
+factorial([1,2,3]);
+factorial(0);
+factorial(-5);
+factorial(5);
+factorial(8);
+ */
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
